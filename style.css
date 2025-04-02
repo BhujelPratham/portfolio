@@ -401,6 +401,12 @@ footer {
     padding-top: 10px;
 }
 
+/* Ensure Images and Containers Resize Properly */
+img, .container, .profile-pic, .project-img, .certificate-img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     nav .container {
@@ -491,6 +497,7 @@ footer {
     .btn {
         padding: 10px 20px;
         font-size: 0.9rem;
+        width: auto; /* Allow buttons to resize dynamically */
     }
 
     #about h2, #skills h2, #projects h2, #certificates h2, #contact h2 {
@@ -520,5 +527,17 @@ footer {
     .social-icons img {
         width: 25px;
         height: 25px;
+    }
+
+    html {
+        font-size: 14px; /* Adjust base font size for better scaling */
+    }
+
+    .container {
+        width: 100%; /* Ensure container spans full width on smaller screens */
+    }
+
+    nav .nav-links {
+        width: auto; /* Prevent overflow issues */
     }
 }
