@@ -403,8 +403,53 @@ footer {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    nav .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav .nav-links li {
+        margin: 10px 0;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    .profile-pic {
+        width: 250px;
+        height: 250px;
+    }
+
+    .skills-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .project-list {
         flex-direction: column;
+    }
+
+    .project-item {
+        flex: 1 1 100%;
+    }
+
+    .certificate-list {
+        flex-direction: column;
+    }
+
+    .certificate-item {
+        flex: 1 1 100%;
     }
 
     .footer-container {
@@ -415,5 +460,65 @@ footer {
 
     .social-icons {
         justify-content: center;
+    }
+
+    nav {
+        padding: 0.5rem;
+    }
+
+    nav .logo {
+        font-size: 1.2rem;
+    }
+
+    nav .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    #home {
+        padding: 80px 0;
+    }
+
+    #home h1 {
+        font-size: 1.8rem;
+        line-height: 1.4;
+    }
+
+    #home p {
+        font-size: 0.9rem;
+        margin: 8px 0;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    #about h2, #skills h2, #projects h2, #certificates h2, #contact h2 {
+        font-size: 1.8rem;
+    }
+
+    #about p, #skills .skills-list li, #projects .project-item p, #certificates .certificate-item p, #contact p {
+        font-size: 0.9rem;
+    }
+
+    .project-item, .certificate-item {
+        padding: 15px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    .footer-about h3, .footer-links h3, .footer-social h3 {
+        font-size: 1rem;
+    }
+
+    .footer-about p, .footer-links a {
+        font-size: 0.8rem;
+    }
+
+    .social-icons img {
+        width: 25px;
+        height: 25px;
     }
 }
