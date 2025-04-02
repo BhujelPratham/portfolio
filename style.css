@@ -24,8 +24,8 @@ body {
 
 /* Container */
 .container {
-    width: 100%; /* Ensure container spans full width */
-    max-width: 1100px; /* Keep a maximum width for larger screens */
+    width: 90%;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -98,7 +98,7 @@ nav .nav-links a:hover {
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 10px 20px; /* Adjust padding for better fit */
+    padding: 12px 30px;
     background-color: var(--primary-color);
     color: var(--background-color);
     text-decoration: none;
@@ -106,8 +106,6 @@ nav .nav-links a:hover {
     border-radius: 30px;
     transition: background 0.3s ease, transform 0.3s ease;
     border: 2px solid var(--border-color);
-    width: auto; /* Allow buttons to resize dynamically */
-    max-width: 100%; /* Prevent overflow */
 }
 
 .btn:hover {
@@ -118,9 +116,8 @@ nav .nav-links a:hover {
 
 /* Profile Picture */
 .profile-pic {
-    width: 80%; /* Use percentage for scaling */
-    max-width: 250px; /* Limit maximum size */
-    height: auto; /* Maintain aspect ratio */
+    width: 350px; /* Increase the size */
+    height: 500px; /* Ensure the height matches the width for a square shape */
     border-radius: 50%; /* Change the shape to a circle */
     object-fit: cover; /* Ensure the image covers the entire area */
     border: 5px solid var(--primary-color); /* Optional: Add a border for better visibility */
@@ -210,8 +207,7 @@ nav .nav-links a:hover {
     padding: 20px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    flex: 1 1 100%; /* Ensure items take full width on smaller screens */
-    max-width: 100%; /* Prevent overflow */
+    flex: 1 1 calc(33.333% - 20px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -232,8 +228,9 @@ nav .nav-links a:hover {
 }
 
 .project-img {
-    width: 100%; /* Ensure images scale to container width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
 }
 
 .ecommerce-img {
@@ -264,8 +261,7 @@ nav .nav-links a:hover {
     padding: 20px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    flex: 1 1 100%; /* Ensure items take full width on smaller screens */
-    max-width: 100%; /* Prevent overflow */
+    flex: 1 1 calc(33.333% - 20px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -286,8 +282,9 @@ nav .nav-links a:hover {
 }
 
 .certificate-img {
-    width: 100%; /* Ensure images scale to container width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
 }
 
 /* Contact Section */
@@ -404,61 +401,10 @@ footer {
     padding-top: 10px;
 }
 
-/* Ensure Images and Containers Resize Properly */
-img, .container, .profile-pic, .project-img, .certificate-img {
-    max-width: 100%;
-    height: auto;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    nav .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav .nav-links {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    nav .nav-links li {
-        margin: 10px 0;
-    }
-
-    #home h1 {
-        font-size: 2rem;
-    }
-
-    #home p {
-        font-size: 1rem;
-    }
-
-    .profile-pic {
-        width: 250px;
-        height: 250px;
-    }
-
-    .skills-list {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .project-list {
         flex-direction: column;
-    }
-
-    .project-item {
-        flex: 1 1 100%;
-    }
-
-    .certificate-list {
-        flex-direction: column;
-    }
-
-    .certificate-item {
-        flex: 1 1 100%;
     }
 
     .footer-container {
@@ -469,78 +415,5 @@ img, .container, .profile-pic, .project-img, .certificate-img {
 
     .social-icons {
         justify-content: center;
-    }
-
-    nav {
-        padding: 0.5rem;
-    }
-
-    nav .logo {
-        font-size: 1.2rem;
-    }
-
-    nav .nav-links a {
-        font-size: 0.9rem;
-    }
-
-    #home {
-        padding: 80px 0;
-    }
-
-    #home h1 {
-        font-size: 1.8rem;
-        line-height: 1.4;
-    }
-
-    #home p {
-        font-size: 0.9rem;
-        margin: 8px 0;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-        width: auto; /* Allow buttons to resize dynamically */
-    }
-
-    #about h2, #skills h2, #projects h2, #certificates h2, #contact h2 {
-        font-size: 1.8rem;
-    }
-
-    #about p, #skills .skills-list li, #projects .project-item p, #certificates .certificate-item p, #contact p {
-        font-size: 0.9rem;
-    }
-
-    .project-item, .certificate-item {
-        padding: 15px;
-    }
-
-    footer {
-        padding: 20px 0;
-    }
-
-    .footer-about h3, .footer-links h3, .footer-social h3 {
-        font-size: 1rem;
-    }
-
-    .footer-about p, .footer-links a {
-        font-size: 0.8rem;
-    }
-
-    .social-icons img {
-        width: 25px;
-        height: 25px;
-    }
-
-    html {
-        font-size: 14px; /* Adjust base font size for better scaling */
-    }
-
-    .container {
-        width: 100%; /* Ensure container spans full width on smaller screens */
-    }
-
-    nav .nav-links {
-        width: auto; /* Prevent overflow issues */
     }
 }
