@@ -24,8 +24,8 @@ body {
 
 /* Container */
 .container {
-    width: 90%;
-    max-width: 1100px;
+    width: 100%; /* Ensure container spans full width */
+    max-width: 1100px; /* Keep a maximum width for larger screens */
     margin: 0 auto;
 }
 
@@ -98,7 +98,7 @@ nav .nav-links a:hover {
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 10px 20px; /* Adjust padding for better fit */
     background-color: var(--primary-color);
     color: var(--background-color);
     text-decoration: none;
@@ -106,6 +106,8 @@ nav .nav-links a:hover {
     border-radius: 30px;
     transition: background 0.3s ease, transform 0.3s ease;
     border: 2px solid var(--border-color);
+    width: auto; /* Allow buttons to resize dynamically */
+    max-width: 100%; /* Prevent overflow */
 }
 
 .btn:hover {
@@ -116,8 +118,9 @@ nav .nav-links a:hover {
 
 /* Profile Picture */
 .profile-pic {
-    width: 350px; /* Increase the size */
-    height: 500px; /* Ensure the height matches the width for a square shape */
+    width: 80%; /* Use percentage for scaling */
+    max-width: 250px; /* Limit maximum size */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Change the shape to a circle */
     object-fit: cover; /* Ensure the image covers the entire area */
     border: 5px solid var(--primary-color); /* Optional: Add a border for better visibility */
@@ -207,7 +210,8 @@ nav .nav-links a:hover {
     padding: 20px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    flex: 1 1 calc(33.333% - 20px);
+    flex: 1 1 100%; /* Ensure items take full width on smaller screens */
+    max-width: 100%; /* Prevent overflow */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -228,9 +232,8 @@ nav .nav-links a:hover {
 }
 
 .project-img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+    width: 100%; /* Ensure images scale to container width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .ecommerce-img {
@@ -261,7 +264,8 @@ nav .nav-links a:hover {
     padding: 20px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    flex: 1 1 calc(33.333% - 20px);
+    flex: 1 1 100%; /* Ensure items take full width on smaller screens */
+    max-width: 100%; /* Prevent overflow */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -282,9 +286,8 @@ nav .nav-links a:hover {
 }
 
 .certificate-img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+    width: 100%; /* Ensure images scale to container width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Contact Section */
