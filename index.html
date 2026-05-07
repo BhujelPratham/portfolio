@@ -4,53 +4,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pratham Raj Bhujel | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <!-- Navbar -->
-<nav>
-    <div class="container">
-        <div class="logo">Pratham Raj Bhujel</div>
-        <ul class="nav-links" style="text-align: right;">
+<nav class="site-nav">
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="container nav-inner">
+        <a href="#home" class="logo">Pratham Raj Bhujel</a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav-links" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul id="site-nav-links" class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#certificates">Certificates</a></li>
             <li><a href="#contact">Contact</a></li>
-
         </ul>
     </div>
 </nav>
 
 <!-- Home Section -->
-<section id="home">
-    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
-        <div>
-            <h1>Hi, I'm <span>Pratham Raj Bhujel</span></h1>
-            <p>A passionate software developer specializing in full-stack development.</p>
-            <a href="#projects" class="btn">Explore My Work</a>
+<section id="home" class="hero">
+    <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid-mesh"></div>
+        <div class="hero-orb hero-orb--a"></div>
+        <div class="hero-orb hero-orb--b"></div>
+        <div class="hero-orb hero-orb--c"></div>
+    </div>
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow__dot"></span> Software developer · Full-stack</p>
+            <h1>
+                <span class="hero-line hero-line--1">Hi, I'm</span>
+                <span class="hero-name-enter"><span class="accent-text">Pratham Raj Bhujel</span></span>
+            </h1>
+            <p class="lead">A passionate developer specializing in full-stack apps, clouds, and thoughtful user experiences.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary"><span class="btn__shine" aria-hidden="true"></span>Explore my work</a>
+                <a href="#certificates" class="btn btn-ghost">See accomplishments</a>
+            </div>
         </div>
-        <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+        <aside class="hero-visual" aria-label="Portrait">
+            <div class="hero-portrait-shell">
+                <figure class="hero-portrait">
+                    <img
+                        src="images/profile.png"
+                        alt="Portrait of Pratham Raj Bhujel"
+                        class="hero-portrait__img"
+                        width="640"
+                        height="640"
+                        decoding="async"
+                        fetchpriority="high"
+                        sizes="(max-width: 960px) 72vw, 286px"
+                    >
+                </figure>
+            </div>
+        </aside>
     </div>
 </section>
 
 <!-- About Section -->
-<section id="about">
-    <div class="container">
-        <h2>About Me</h2>
-        <p>
-            I'm an IT enthusiast with experience in Java, Python, C#, JavaScript, SQL, and Salesforce CRM. 
-            I enjoy building software, web apps, and mobile applications, and I have hands-on experience with JavaFX, Android development, cloud computing, and data processing using MongoDB. 
-            I'm always looking to learn new technologies, improve my skills, and solve challenging problems with efficient and user-friendly solutions.
+<section id="about" class="animate-on-scroll section-pad">
+    <div class="container narrow">
+        <p class="section-label">Introduction</p>
+        <h2>About me</h2>
+        <p class="section-lead">
+            I'm an IT enthusiast with experience in Java, Python, C#, JavaScript, SQL, and Salesforce CRM.
+            I enjoy building software, web apps, and mobile applications, and I have hands-on experience with JavaFX,
+            Android development, cloud computing, and data processing using MongoDB.
+            I'm always learning new technologies and solving challenging problems with efficient, user-friendly solutions.
         </p>
     </div>
 </section>
 
 <!-- Skills Section -->
-<section id="skills">
+<section id="skills" class="animate-on-scroll section-pad muted-bg">
     <div class="container">
+        <p class="section-label">Toolbox</p>
         <h2>Skills</h2>
         <ul class="skills-list">
             <li>Java</li>
@@ -63,7 +101,10 @@
             <li>AWS</li>
             <li>Microsoft Azure</li>
             <li>Prompt Engineering</li>
-            <li>Algorithms</li>
+            <li>AI</li>
+            <li>ML</li>
+            <li>Algorithm</li>
+            <li>Linux</li>
             <li>Computer Architecture</li>
             <li>Game Development</li>
             <li>React</li>
@@ -74,59 +115,226 @@
     </div>
 </section>
 
-<!-- Projects Section -->
-<section id="projects">
+<!-- Experience Section -->
+<section id="experience" class="animate-on-scroll section-pad">
     <div class="container">
+        <p class="section-label">Professional</p>
+        <h2>Experience</h2>
+        <ul class="experience-list">
+            <li>
+                <article class="experience-card">
+                    <div class="experience-logo">
+                        <img src="images/bgo-outreach.svg" width="72" height="72" alt="Business & Government Outreach logo" decoding="async" />
+                    </div>
+                    <div class="experience-body">
+                        <h3>Government Affairs IT Student Assistant</h3>
+                        <p class="experience-company">Business & Government Outreach</p>
+                        <p class="experience-meta"><span class="experience-badge">Part-time</span> Mar 2024 – Present · Green Bay, WI · Remote</p>
+                        <p class="experience-detail">Supporting IT needs for government affairs and outreach—including web content (HTML), data-driven tasks, operations research tooling, and related technical support.</p>
+                        <p class="experience-skills">Skills used: Operations Research, HTML, and a broad set of complementary IT competencies.</p>
+                    </div>
+                </article>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="animate-on-scroll section-pad projects-section">
+    <div class="container">
+        <p class="section-label">Work</p>
         <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project-item">
-                <img src="images/finance-tracker.png" alt="Finance Tracker" class="project-img">
-                <h3>Finance Tracker App</h3>
-                <p>A Java-based app that helps users track expenses and manage their budget effectively.</p>
+        <p class="section-lead projects-intro">Highlighted hackathon and coursework builds, plus earlier apps that strengthened my foundations in Java, Android, and the web.</p>
+
+        <div class="projects-wrap">
+            <div class="project-phase project-phase--featured">
+                <h3 class="project-group-heading">Featured builds</h3>
+                <div class="project-grid project-grid--duo">
+                    <article class="project-item">
+                        <div class="project-media project-media--icon project-media--mindcare">
+                            <img src="images/icon-mindcare.svg" alt="" class="project-icon" width="112" height="112" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3>Mindcare</h3>
+                            <p class="project-sub">Nepal–US Hackathon 2026 · Team 7 (Bugslayer)</p>
+                            <p class="project-lede">A mental wellbeing check-in experience for Nepali youth—zones for support without diagnosis, journaling that fights stigma with scripts and cultural context, and safety-first UX.</p>
+                            <ul class="project-bullets">
+                                <li>Two-minute questionnaire maps users into support zones (green→red non-diagnostic guidance).</li>
+                                <li>&ldquo;You Are Not Alone&rdquo; journal: data-informed prompts and conversation starters with cultural framing.</li>
+                                <li>Retention &amp; safety: elevated-risk flows, structured learning paths, and a habit leaderboard.</li>
+                                <li>ML: Extra Trees classifier; curated Kaggle training data; aligns with WHO/CDC public-health references.</li>
+                                <li>Docs &amp; strategy: rigorous write-ups of methodologies/datasets plus sharp stakeholder questions for the organizers.</li>
+                            </ul>
+                            <p class="project-stack-line">Tech: React · TypeScript · Go · PostgreSQL · ML pipeline</p>
+                        </div>
+                    </article>
+                    <article class="project-item">
+                        <div class="project-media project-media--icon project-media--recipe">
+                            <img src="images/icon-recipe-buddy.svg" alt="" class="project-icon" width="112" height="112" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3>Smart AI Recipe Assistant <span class="project-nickname">Recipe Buddy</span></h3>
+                            <p class="project-sub">Software engineering · UWGB · Team project</p>
+                            <p class="project-lede">Camera-driven ingredient verification, structured AI cooking steps with timers, and professional documentation from SRS to demos.</p>
+                            <ul class="project-bullets">
+                                <li>Ingredient recognition wired through device camera APIs and validation flows.</li>
+                                <li>Step-by-step walkthroughs: structured model output mapped to UX and automated timers.</li>
+                                <li>Explored nutritional dashboards and smart substitution workflows.</li>
+                                <li>Abstract Factory encapsulates alternate recipe-generation modes cleanly.</li>
+                                <li>Engineering hygiene: Git collaboration, perf tradeoffs, SRS + user stories + portfolio-ready summaries.</li>
+                            </ul>
+                            <p class="project-stack-line">Tech: Mobile/camera APIs · Structured AI outputs · SRS &amp; design patterns</p>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <div class="project-item">
-                <img src="images/bmilogo.png" alt="BMI Calculator" class="project-img">
-                <h3>BMI Calculator</h3>
-                <p>An Android app that calculates BMI and provides personalized health advice.</p>
-            </div>
-            <div class="project-item">
-                <img src="images/ecommerce.png" alt="Ecommerce Website" class="project-img ecommerce-img">
-                <h3>Ecommerce Website</h3>
-                <p>An ecommerce website for an electronic store.</p>
+
+            <div class="project-phase project-phase--library">
+                <h3 class="project-group-heading">Earlier apps &amp; foundations</h3>
+                <div class="project-grid project-grid--trio">
+                    <article class="project-item">
+                        <div class="project-media project-media--icon project-media--finance">
+                            <img src="images/icon-finance-tracker.svg" alt="" class="project-icon" width="112" height="112" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3>Finance Tracker App</h3>
+                            <p class="project-sub">Desktop · Java · Personal finance</p>
+                            <p class="project-lede">Hands-on budgeting tool: frictionless expense capture with totals that replace ad-hoc spreadsheet tracking.</p>
+                            <ul class="project-bullets">
+                                <li>Income/expense logging with categorical breakdowns households actually use.</li>
+                                <li>Snapshot dashboards for monthly burn, category rollups, and trend awareness.</li>
+                                <li>Entry flows trimmed for repetition—minimal clicks for daily upkeep.</li>
+                                <li>Java desktop codebase centered on deterministic logic you can iterate on confidently.</li>
+                                <li>Good baseline for reinforcing OOP fundamentals and UX clarity before larger stacks.</li>
+                            </ul>
+                            <p class="project-stack-line">Tech: Java · Desktop UI · Data modeling</p>
+                        </div>
+                    </article>
+                    <article class="project-item">
+                        <div class="project-media project-media--icon project-media--bmi">
+                            <img src="images/icon-bmi.svg" alt="" class="project-icon" width="112" height="112" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3>BMI Calculator</h3>
+                            <p class="project-sub">Android · Health literacy</p>
+                            <p class="project-lede">Mobile-first BMI utility that pairs fast inputs with humane copy—education without pretending to replace clinicians.</p>
+                            <ul class="project-bullets">
+                                <li>Validated height/weight entry with instantaneous BMI computation.</li>
+                                <li>Band-specific guidance copy that motivates next steps instead of jargon dumps.</li>
+                                <li>Readable layouts tuned for one-thumb use on smaller screens.</li>
+                                <li>Android packaging so the calculator is always handy when curiosity strikes.</li>
+                                <li>Grounding project for mobile UX details: errors, empties, and microcopy polish.</li>
+                            </ul>
+                            <p class="project-stack-line">Tech: Android · Java/Kotlin-ready patterns · UX microcopy</p>
+                        </div>
+                    </article>
+                    <article class="project-item">
+                        <div class="project-media project-media--icon project-media--ecommerce">
+                            <img src="images/icon-ecommerce.svg" alt="" class="project-icon" width="112" height="112" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3>Ecommerce Website</h3>
+                            <p class="project-sub">Web · Electronics storefront concept</p>
+                            <p class="project-lede">Catalog-first storefront for consumer electronics—emphasis on grids, rhythm, and clear calls-to-action over decorative noise.</p>
+                            <ul class="project-bullets">
+                                <li>Product tiles with SKU-style hierarchy, emphasis states, and scannable pricing.</li>
+                                <li>Flows that mimic real ecommerce UX: browse grids → detail storytelling → decisive CTAs.</li>
+                                <li>Responsive breakpoints that keep merchandising coherent on handheld widths.</li>
+                                <li>Consistent typography + spacing scales so the presentation feels storefront-grade.</li>
+                                <li>Front-end stamina builder before jumping into SPA frameworks at scale.</li>
+                            </ul>
+                            <p class="project-stack-line">Tech: HTML · CSS · JavaScript · Responsive layouts</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Certificates Section -->
-<section id="certificates">
+<section id="certificates" class="animate-on-scroll section-pad muted-bg certificates-section">
     <div class="container">
-        <h2>Certificates</h2>
-        <div class="certificate-list">
-            <div class="certificate-item">
-                <img src="images/certificate1.png" alt="Certificate 1" class="certificate-img">
-                <h3>Foundations of Prompt Engineering</h3>
-                <p>Awarded for completing the course on advanced techniques in prompt design and AI model optimization.</p>
-            </div>
-            <div class="certificate-item">
-                <img src="images/certificate2.png" alt="Certificate 2" class="certificate-img">
-                <h3>Getting Started with AWS for Games - Part I</h3>
-                <p>Awarded for completing the course on basic techniques in the usage of cloud infrastructure for developing games.</p>
-            </div>
-            <div class="certificate-item">
-                <img src="images/certificate3.png" alt="Certificate 3" class="certificate-img">
-                <h3>Getting Started with AWS for Games - Part II</h3>
-                <p>Awarded for completing the course on advanced techniques in the usage of cloud infrastructure for developing games.</p>
-            </div>
+        <p class="section-label">Recognition</p>
+        <h2>Certificates &amp; accomplishments</h2>
+        <p class="section-lead">Recent highlights—hover for a shine effect, click to view full size.</p>
+
+        <h3 class="cert-group-title">Latest</h3>
+        <div class="certificate-grid certificate-grid--featured">
+            <article class="certificate-card certificate-card--featured" tabindex="0" data-cert-src="images/certificate-nepal-us-hackathon-2026.png" data-cert-alt="Participant certificate for Nepal–US Hackathon 2026">
+                <span class="cert-badge">2026</span>
+                <div class="cert-preview" aria-hidden="true">
+                    <img src="images/certificate-nepal-us-hackathon-2026.png" alt="" class="certificate-img" loading="lazy" width="600" height="400">
+                </div>
+                <div class="certificate-body">
+                    <h3>Nepal–US Hackathon 2026</h3>
+                    <p class="cert-meta">Nepali Leaders Network · Mar 27–29, 2026</p>
+                    <p>Participant certificate — Team 7 (Bugslayer).</p>
+                </div>
+            </article>
+            <article class="certificate-card certificate-card--featured" tabindex="0" data-cert-src="images/certificate-ai-fluency-framework.png" data-cert-alt="Certificate: AI Fluency Framework and Foundations by Anthropic">
+                <span class="cert-badge">New</span>
+                <div class="cert-preview" aria-hidden="true">
+                    <img src="images/certificate-ai-fluency-framework.png" alt="" class="certificate-img" loading="lazy" width="600" height="400">
+                </div>
+                <div class="certificate-body">
+                    <h3>AI Fluency: Framework &amp; Foundations</h3>
+                    <p class="cert-meta">Anthropic · Certificate of completion</p>
+                    <p>Foundational AI fluency program with academic partners.</p>
+                </div>
+            </article>
+            <article class="certificate-card certificate-card--featured" tabindex="0" data-cert-src="images/certificate-ai-fluency-students.png" data-cert-alt="Certificate: AI Fluency for students by Anthropic">
+                <span class="cert-badge">New</span>
+                <div class="cert-preview" aria-hidden="true">
+                    <img src="images/certificate-ai-fluency-students.png" alt="" class="certificate-img" loading="lazy" width="600" height="400">
+                </div>
+                <div class="certificate-body">
+                    <h3>AI Fluency for students</h3>
+                    <p class="cert-meta">Anthropic · Certificate of completion</p>
+                    <p>Student-focused track on applied AI literacy.</p>
+                </div>
+            </article>
+        </div>
+
+        <h3 class="cert-group-title">Earlier certifications</h3>
+        <div class="certificate-grid">
+            <article class="certificate-card" tabindex="0" data-cert-src="images/certificate1.png" data-cert-alt="Foundations of Prompt Engineering certificate">
+                <div class="cert-preview" aria-hidden="true">
+                    <img src="images/certificate1.png" alt="" class="certificate-img" loading="lazy" width="600" height="400">
+                </div>
+                <div class="certificate-body">
+                    <h3>Foundations of Prompt Engineering</h3>
+                    <p>Advanced techniques in prompt design and AI model optimization.</p>
+                </div>
+            </article>
+            <article class="certificate-card" tabindex="0" data-cert-src="images/certificate2.png" data-cert-alt="AWS for Games Part I certificate">
+                <div class="cert-preview" aria-hidden="true">
+                    <img src="images/certificate2.png" alt="" class="certificate-img" loading="lazy" width="600" height="400">
+                </div>
+                <div class="certificate-body">
+                    <h3>Getting Started with AWS for Games — Part I</h3>
+                    <p>Cloud infrastructure fundamentals for game development.</p>
+                </div>
+            </article>
+            <article class="certificate-card" tabindex="0" data-cert-src="images/certificate3.png" data-cert-alt="AWS for Games Part II certificate">
+                <div class="cert-preview" aria-hidden="true">
+                    <img src="images/certificate3.png" alt="" class="certificate-img" loading="lazy" width="600" height="400">
+                </div>
+                <div class="certificate-body">
+                    <h3>Getting Started with AWS for Games — Part II</h3>
+                    <p>Advanced cloud patterns for building and scaling games.</p>
+                </div>
+            </article>
         </div>
     </div>
 </section>
 
 <!-- Contact Section -->
-<section id="contact">
-    <div class="container">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out for any collaboration or inquiries:</p>
+<section id="contact" class="animate-on-scroll section-pad">
+    <div class="container narrow">
+        <p class="section-label">Let's talk</p>
+        <h2>Contact me</h2>
+        <p class="section-lead">Open to collaboration, internships, and interesting projects.</p>
         <div class="contact-info">
             <p><strong>Email:</strong> <a href="mailto:prathamrai12377@gmail.com">prathamrai12377@gmail.com</a></p>
             <p><strong>Phone:</strong> <a href="tel:+13176039925">+1 (317) 603-9925</a></p>
@@ -134,41 +342,56 @@
     </div>
 </section>
 
+<!-- Certificate lightbox -->
+<div id="cert-modal" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title" hidden>
+    <div class="cert-modal__backdrop" data-close-modal></div>
+    <div class="cert-modal__panel">
+        <button type="button" class="cert-modal__close" data-close-modal aria-label="Close">&times;</button>
+        <h2 id="cert-modal-title" class="visually-hidden">Certificate</h2>
+        <img id="cert-modal-img" class="cert-modal__img" src="" alt="" />
+    </div>
+</div>
+
 <!-- Footer -->
-<footer>
+<footer class="site-footer">
+    <div class="footer-glow footer-glow--a" aria-hidden="true"></div>
+    <div class="footer-glow footer-glow--b" aria-hidden="true"></div>
     <div class="container footer-container">
         <div class="footer-about">
-            <h3>About Me</h3>
+            <h3>About me</h3>
             <p>
-                A passionate software developer with a focus on building clean, efficient, and user-friendly applications.
+                A passionate software developer focused on clean, efficient, and user-friendly applications.
             </p>
         </div>
         <div class="footer-links">
-            <h3>Quick Links</h3>
+            <h3>Quick links</h3>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
         <div class="footer-social">
-            <h3>Follow Me</h3>
+            <h3>Follow me</h3>
             <div class="social-icons">
-                <a href="https://www.instagram.com/pratham_bhujel7/" target="_blank">
-                    <img src="images/instagram.png" alt="instagram" />
+                <a href="https://www.instagram.com/pratham_bhujel7/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/instagram.png" alt="Instagram" />
                 </a>
-                <a href="https://www.linkedin.com/in/pratham-bhujel-b70476206/?trk=opento_sprofile_details" target="_blank">
+                <a href="https://www.linkedin.com/in/pratham-bhujel-b70476206/?trk=opento_sprofile_details" target="_blank" rel="noopener noreferrer">
                     <img src="images/linkedin.png" alt="LinkedIn" />
                 </a>
-                <a href="https://x.com/BhujelPratham" target="_blank">
-                    <img src="images/twitter.png" alt="Twitter" />
+                <a href="https://x.com/BhujelPratham" target="_blank" rel="noopener noreferrer">
+                    <img src="images/twitter.png" alt="X (Twitter)" />
                 </a>
             </div>
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2025 Pratham Raj Bhujel. All Rights Reserved.</p>
+        <p>&copy; 2026 Pratham Raj Bhujel. All rights reserved.</p>
     </div>
 </footer>
 

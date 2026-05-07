@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="bmi-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e6b7a"/>
+      <stop offset="100%" style="stop-color:#2a9578"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="22" fill="url(#bmi-bg)"/>
+  <!-- Stylized scale -->
+  <path stroke="#f0fcf9" stroke-width="2.4" stroke-linecap="round" fill="none" d="M40 92h42"/>
+  <path fill="rgba(255,255,255,0.2)" stroke="#f0fcf9" stroke-width="2" d="M48 92V58l12-22h12l12 22v34H48Z"/>
+  <circle cx="60" cy="44" r="6" stroke="#f0fcf9" stroke-width="2" fill="rgba(255,255,255,0.15)"/>
+  <path stroke="#d4f066" stroke-width="2.2" stroke-linecap="round" fill="none" d="M72 74h22M74 82h18M76 66h14"/>
+</svg>

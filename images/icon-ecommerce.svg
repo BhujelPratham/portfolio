@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="ec-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a3d7a"/>
+      <stop offset="100%" style="stop-color:#6b4f9c"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="22" fill="url(#ec-bg)"/>
+  <!-- Store window -->
+  <rect x="24" y="28" width="72" height="52" rx="10" stroke="#f4f1ff" stroke-width="2.2" fill="rgba(255,255,255,0.1)"/>
+  <path stroke="#f4f1ff" stroke-width="2" stroke-linecap="round" fill="none" d="M32 40h56"/>
+  <circle cx="36" cy="34" r="2.5" fill="#f4a5a5"/>
+  <circle cx="46" cy="34" r="2.5" fill="#f4d595"/>
+  <circle cx="56" cy="34" r="2.5" fill="#b8e986"/>
+  <rect x="38" y="50" width="44" height="22" rx="4" stroke="#f4f1ff" stroke-width="1.8" fill="rgba(255,255,255,0.08)"/>
+  <path stroke="#f4f1ff" stroke-width="2" stroke-linecap="round" fill="none" d="M44 76h38"/>
+  <!-- Cart -->
+  <path fill="rgba(255,255,255,0.15)" stroke="#f4f1ff" stroke-width="2" stroke-linejoin="round"
+    d="M36 92h54l-4-26H34l-2 26z"/>
+  <circle cx="44" cy="98" r="3.5" fill="none" stroke="#f4f1ff" stroke-width="1.8"/>
+  <circle cx="78" cy="98" r="3.5" fill="none" stroke="#f4f1ff" stroke-width="1.8"/>
+  <path stroke="#ffd88a" stroke-width="2" stroke-linecap="round" fill="none" d="M48 34l8 8 16-16"/>
+</svg>
