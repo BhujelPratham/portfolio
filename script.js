@@ -11,9 +11,9 @@
             else if (query?.addListener) query.addListener(callback);
         }
 
-        // The system theme is the default until a visitor makes a choice.
+        // Start in the portfolio's dark theme until a visitor makes a choice.
         const themeButton = document.getElementById("theme-toggle");
-        const systemTheme = window.matchMedia?.("(prefers-color-scheme: dark)");
+        const themeColor = document.querySelector('meta[name="theme-color"]');
         let themePreference = null;
 
         function readTheme(value) {
@@ -27,9 +27,10 @@
         }
 
         function applyTheme() {
-            const theme = themePreference || (systemTheme?.matches ? "dark" : "light");
+            const theme = themePreference || "dark";
             root.dataset.theme = theme;
             root.style.colorScheme = theme;
+            themeColor?.setAttribute("content", theme === "dark" ? "#080a0f" : "#f3f4f6");
             if (themeButton) {
                 const label = `Switch to ${theme === "dark" ? "light" : "dark"} theme`;
                 themeButton.setAttribute("aria-label", label);
@@ -47,9 +48,6 @@
                 // The page has already applied the requested theme.
             }
         });
-        onMediaChange(systemTheme, () => {
-            if (!themePreference) applyTheme();
-        });
         window.addEventListener("storage", (event) => {
             if (event.key === "portfolio-theme" || event.key === null) {
                 themePreference = readTheme(event.newValue);
@@ -61,6 +59,16 @@
         const navToggle = document.querySelector(".nav-toggle");
         const navLinks = document.getElementById("site-nav-links");
         const mobileQuery = window.matchMedia?.("(max-width: 800px)");
+
+        function focusSection(link) {
+            const target = document.getElementById(link.getAttribute("href").slice(1));
+            if (!target) return;
+            if (!target.hasAttribute("tabindex")) {
+                target.setAttribute("tabindex", "-1");
+                target.addEventListener("blur", () => target.removeAttribute("tabindex"), { once: true });
+            }
+            target.focus({ preventScroll: true });
+        }
 
         function closeMobileNav(restoreFocus = false) {
             if (!navToggle || !navLinks) return;
@@ -80,7 +88,12 @@
             });
             navLinks.querySelectorAll('a[href^="#"]').forEach((link) => {
                 // Let native anchors preserve URL hashes, history, and keyboard behavior.
-                link.addEventListener("click", () => closeMobileNav());
+                link.addEventListener("click", (event) => {
+                    if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+                    const wasOpen = navToggle.getAttribute("aria-expanded") === "true";
+                    closeMobileNav();
+                    if (wasOpen) window.requestAnimationFrame(() => focusSection(link));
+                });
             });
             document.addEventListener("keydown", (event) => {
                 if (event.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
@@ -179,7 +192,7 @@
                     modalImage.src = source;
                     modalImage.alt = card.dataset.certAlt || "Certificate";
                     if (modalTitle) {
-                        modalTitle.textContent = card.dataset.certTitle || card.querySelector("h3")?.textContent || "Certificate preview";
+                        modalTitle.textContent = card.dataset.certTitle || card.querySelector("h3, h4")?.textContent || "Certificate preview";
                     }
                     try {
                         modal.showModal();
@@ -218,6 +231,119 @@
                 if (certificateTrigger?.isConnected) certificateTrigger.focus({ preventScroll: true });
                 certificateTrigger = null;
             });
+        }
+
+        const quickNav = document.getElementById("quick-nav-dialog");
+        const quickInput = document.getElementById("quick-nav-input");
+        const quickResults = document.getElementById("quick-nav-results");
+        const quickEmpty = document.getElementById("quick-nav-empty");
+        const quickOpeners = document.querySelectorAll("[data-open-quick-nav]");
+
+        if (quickNav && quickInput && quickResults && typeof quickNav.showModal === "function") {
+            const links = Array.from(quickResults.querySelectorAll('a[href^="#"]'));
+            let quickTrigger = null;
+            let selectedLink = null;
+
+            function resultContainer(link) {
+                const listItem = link.closest("li");
+                return listItem && quickResults.contains(listItem) ? listItem : link;
+            }
+
+            function visibleLinks() {
+                return links.filter((link) => !resultContainer(link).hidden);
+            }
+
+            function filterNavigation() {
+                const words = quickInput.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+                links.forEach((link) => {
+                    const text = `${link.textContent} ${link.dataset.search || ""}`.toLocaleLowerCase();
+                    resultContainer(link).hidden = !words.every((word) => text.includes(word));
+                });
+                if (quickEmpty) quickEmpty.hidden = visibleLinks().length > 0;
+            }
+
+            function openQuickNav(trigger) {
+                if (quickNav.open || modal?.open) return;
+                closeMobileNav();
+                quickTrigger = trigger;
+                selectedLink = null;
+                quickInput.value = "";
+                filterNavigation();
+                quickNav.showModal();
+                document.body.classList.add("modal-open");
+                quickInput.focus({ preventScroll: true });
+            }
+
+            quickOpeners.forEach((button) => {
+                button.addEventListener("click", () => openQuickNav(button));
+            });
+            quickNav.querySelectorAll("[data-close-quick-nav]").forEach((button) => {
+                button.addEventListener("click", () => quickNav.close());
+            });
+            quickInput.addEventListener("input", filterNavigation);
+
+            document.addEventListener("keydown", (event) => {
+                if (!(event.metaKey || event.ctrlKey) || event.altKey || event.key.toLowerCase() !== "k" || modal?.open) return;
+                event.preventDefault();
+                if (event.repeat) return;
+                if (quickNav.open) quickNav.close();
+                else openQuickNav(document.activeElement);
+            });
+
+            quickNav.addEventListener("keydown", (event) => {
+                const currentLinks = visibleLinks();
+                if (event.key === "Enter" && event.target === quickInput) {
+                    event.preventDefault();
+                    currentLinks[0]?.click();
+                    return;
+                }
+                if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+                const currentIndex = currentLinks.indexOf(document.activeElement);
+                if (event.target !== quickInput && currentIndex === -1) return;
+                event.preventDefault();
+                if (!currentLinks.length) return;
+                if (event.key === "ArrowDown") {
+                    currentLinks[(currentIndex + 1) % currentLinks.length].focus();
+                } else if (currentIndex === 0) {
+                    quickInput.focus();
+                } else {
+                    currentLinks[currentIndex === -1 ? currentLinks.length - 1 : currentIndex - 1].focus();
+                }
+            });
+
+            links.forEach((link) => {
+                link.addEventListener("click", (event) => {
+                    if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+                    selectedLink = link;
+                    quickNav.close();
+                    // The anchor's default action owns scrolling and browser history.
+                });
+            });
+
+            let backdropPointerDown = false;
+            function isOutsideQuickNav(event) {
+                const bounds = quickNav.getBoundingClientRect();
+                return event.target === quickNav && (
+                    event.clientX < bounds.left || event.clientX > bounds.right ||
+                    event.clientY < bounds.top || event.clientY > bounds.bottom
+                );
+            }
+            quickNav.addEventListener("pointerdown", (event) => {
+                backdropPointerDown = isOutsideQuickNav(event);
+            });
+            quickNav.addEventListener("click", (event) => {
+                if (backdropPointerDown && isOutsideQuickNav(event)) quickNav.close();
+                backdropPointerDown = false;
+            });
+            quickNav.addEventListener("close", () => {
+                if (!modal?.open) document.body.classList.remove("modal-open");
+                if (selectedLink) focusSection(selectedLink);
+                else if (quickTrigger?.isConnected) quickTrigger.focus({ preventScroll: true });
+                quickTrigger = null;
+                selectedLink = null;
+            });
+        } else {
+            quickOpeners.forEach((button) => { button.hidden = true; });
         }
 
         const copyButton = document.getElementById("copy-email");
