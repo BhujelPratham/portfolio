@@ -1,400 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pratham Raj Bhujel | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="Pratham Raj Bhujel is a software developer in Green Bay, Wisconsin building thoughtful web, mobile, cloud, and AI projects. Explore selected work and experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pratham Raj Bhujel · Software Developer">
+  <meta property="og:description" content="Thoughtful code. Meaningful experiences. Explore Pratham's projects, experience, and credentials.">
+  <meta property="og:image" content="images/profile.png">
+  <title>Pratham Raj Bhujel · Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="site-nav">
-    <div class="scroll-progress" aria-hidden="true"></div>
-    <div class="container nav-inner">
-        <a href="#home" class="logo">Pratham Raj Bhujel</a>
-        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav-links" aria-label="Open menu">
-            <span></span><span></span><span></span>
-        </button>
-        <ul id="site-nav-links" class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-
-<!-- Home Section -->
-<section id="home" class="hero">
-    <div class="hero-bg" aria-hidden="true">
-        <div class="hero-grid-mesh"></div>
-        <div class="hero-orb hero-orb--a"></div>
-        <div class="hero-orb hero-orb--b"></div>
-        <div class="hero-orb hero-orb--c"></div>
-    </div>
-    <div class="container hero-grid">
-        <div class="hero-copy">
-            <p class="eyebrow"><span class="eyebrow__dot"></span> Software developer · Full-stack</p>
-            <h1>
-                <span class="hero-line hero-line--1">Hi, I'm</span>
-                <span class="hero-name-enter"><span class="accent-text">Pratham Raj Bhujel</span></span>
-            </h1>
-            <p class="lead">A passionate developer specializing in full-stack apps, clouds, and thoughtful user experiences.</p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary"><span class="btn__shine" aria-hidden="true"></span>Explore my work</a>
-                <a href="#certificates" class="btn btn-ghost">See accomplishments</a>
-            </div>
-        </div>
-        <aside class="hero-visual" aria-label="Portrait">
-            <div class="hero-portrait-shell">
-                <figure class="hero-portrait">
-                    <img
-                        src="images/profile.png"
-                        alt="Portrait of Pratham Raj Bhujel"
-                        class="hero-portrait__img"
-                        width="640"
-                        height="640"
-                        decoding="async"
-                        fetchpriority="high"
-                        sizes="(max-width: 960px) 72vw, 286px"
-                    >
-                </figure>
-            </div>
-        </aside>
-    </div>
-</section>
-
-<!-- About Section -->
-<section id="about" class="animate-on-scroll section-pad">
-    <div class="container narrow">
-        <p class="section-label">Introduction</p>
-        <h2>About me</h2>
-        <p class="section-lead">
-            I'm an IT enthusiast with experience in Java, Python, C#, JavaScript, SQL, and Salesforce CRM.
-            I enjoy building software, web apps, and mobile applications, and I have hands-on experience with JavaFX,
-            Android development, cloud computing, and data processing using MongoDB.
-            I'm always learning new technologies and solving challenging problems with efficient, user-friendly solutions.
-        </p>
-    </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="animate-on-scroll section-pad muted-bg">
-    <div class="container">
-        <p class="section-label">Toolbox</p>
-        <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>Java</li>
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>HTML & CSS</li>
-            <li>C</li>
-            <li>Android Development</li>
-            <li>C++</li>
-            <li>AWS</li>
-            <li>Microsoft Azure</li>
-            <li>Prompt Engineering</li>
-            <li>AI</li>
-            <li>ML</li>
-            <li>Algorithm</li>
-            <li>Linux</li>
-            <li>Computer Architecture</li>
-            <li>Game Development</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>SQL</li>
-            <li>Git & GitHub</li>
-        </ul>
-    </div>
-</section>
-
-<!-- Experience Section -->
-<section id="experience" class="animate-on-scroll section-pad">
-    <div class="container">
-        <p class="section-label">Professional</p>
-        <h2>Experience</h2>
-        <ul class="experience-list">
-            <li>
-                <article class="experience-card">
-                    <div class="experience-logo">
-                        <img src="images/bgo-outreach.svg" width="72" height="72" alt="Business & Government Outreach logo" decoding="async" />
-                    </div>
-                    <div class="experience-body">
-                        <h3>Government Affairs IT Student Assistant</h3>
-                        <p class="experience-company">Business & Government Outreach</p>
-                        <p class="experience-meta"><span class="experience-badge">Part-time</span> Mar 2024 – Present · Green Bay, WI · Remote</p>
-                        <p class="experience-detail">Supporting IT needs for government affairs and outreach—including web content (HTML), data-driven tasks, operations research tooling, and related technical support.</p>
-                        <p class="experience-skills">Skills used: Operations Research, HTML, and a broad set of complementary IT competencies.</p>
-                    </div>
-                </article>
-            </li>
-        </ul>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="animate-on-scroll section-pad projects-section">
-    <div class="container">
-        <p class="section-label">Work</p>
-        <h2>Projects</h2>
-        <p class="section-lead projects-intro">Highlighted hackathon and coursework builds, plus earlier apps that strengthened my foundations in Java, Android, and the web.</p>
-
-        <div class="projects-wrap">
-            <div class="project-phase project-phase--featured">
-                <h3 class="project-group-heading">Featured builds</h3>
-                <div class="project-grid project-grid--duo">
-                    <article class="project-item">
-                        <div class="project-media project-media--icon project-media--mindcare">
-                            <img src="images/icon-mindcare.svg" alt="" class="project-icon" width="112" height="112" loading="lazy">
-                        </div>
-                        <div class="project-body">
-                            <h3>Mindcare</h3>
-                            <p class="project-sub">Nepal–US Hackathon 2026 · Team 7 (Bugslayer)</p>
-                            <p class="project-lede">A mental wellbeing check-in experience for Nepali youth—zones for support without diagnosis, journaling that fights stigma with scripts and cultural context, and safety-first UX.</p>
-                            <ul class="project-bullets">
-                                <li>Two-minute questionnaire maps users into support zones (green→red non-diagnostic guidance).</li>
-                                <li>&ldquo;You Are Not Alone&rdquo; journal: data-informed prompts and conversation starters with cultural framing.</li>
-                                <li>Retention &amp; safety: elevated-risk flows, structured learning paths, and a habit leaderboard.</li>
-                                <li>ML: Extra Trees classifier; curated Kaggle training data; aligns with WHO/CDC public-health references.</li>
-                                <li>Docs &amp; strategy: rigorous write-ups of methodologies/datasets plus sharp stakeholder questions for the organizers.</li>
-                            </ul>
-                            <p class="project-stack-line">Tech: React · TypeScript · Go · PostgreSQL · ML pipeline</p>
-                        </div>
-                    </article>
-                    <article class="project-item">
-                        <div class="project-media project-media--icon project-media--recipe">
-                            <img src="images/icon-recipe-buddy.svg" alt="" class="project-icon" width="112" height="112" loading="lazy">
-                        </div>
-                        <div class="project-body">
-                            <h3>Smart AI Recipe Assistant <span class="project-nickname">Recipe Buddy</span></h3>
-                            <p class="project-sub">Software engineering · UWGB · Team project</p>
-                            <p class="project-lede">Camera-driven ingredient verification, structured AI cooking steps with timers, and professional documentation from SRS to demos.</p>
-                            <ul class="project-bullets">
-                                <li>Ingredient recognition wired through device camera APIs and validation flows.</li>
-                                <li>Step-by-step walkthroughs: structured model output mapped to UX and automated timers.</li>
-                                <li>Explored nutritional dashboards and smart substitution workflows.</li>
-                                <li>Abstract Factory encapsulates alternate recipe-generation modes cleanly.</li>
-                                <li>Engineering hygiene: Git collaboration, perf tradeoffs, SRS + user stories + portfolio-ready summaries.</li>
-                            </ul>
-                            <p class="project-stack-line">Tech: Mobile/camera APIs · Structured AI outputs · SRS &amp; design patterns</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-
-            <div class="project-phase project-phase--library">
-                <h3 class="project-group-heading">Earlier apps &amp; foundations</h3>
-                <div class="project-grid project-grid--trio">
-                    <article class="project-item">
-                        <div class="project-media project-media--icon project-media--finance">
-                            <img src="images/icon-finance-tracker.svg" alt="" class="project-icon" width="112" height="112" loading="lazy">
-                        </div>
-                        <div class="project-body">
-                            <h3>Finance Tracker App</h3>
-                            <p class="project-sub">Desktop · Java · Personal finance</p>
-                            <p class="project-lede">Hands-on budgeting tool: frictionless expense capture with totals that replace ad-hoc spreadsheet tracking.</p>
-                            <ul class="project-bullets">
-                                <li>Income/expense logging with categorical breakdowns households actually use.</li>
-                                <li>Snapshot dashboards for monthly burn, category rollups, and trend awareness.</li>
-                                <li>Entry flows trimmed for repetition—minimal clicks for daily upkeep.</li>
-                                <li>Java desktop codebase centered on deterministic logic you can iterate on confidently.</li>
-                                <li>Good baseline for reinforcing OOP fundamentals and UX clarity before larger stacks.</li>
-                            </ul>
-                            <p class="project-stack-line">Tech: Java · Desktop UI · Data modeling</p>
-                        </div>
-                    </article>
-                    <article class="project-item">
-                        <div class="project-media project-media--icon project-media--bmi">
-                            <img src="images/icon-bmi.svg" alt="" class="project-icon" width="112" height="112" loading="lazy">
-                        </div>
-                        <div class="project-body">
-                            <h3>BMI Calculator</h3>
-                            <p class="project-sub">Android · Health literacy</p>
-                            <p class="project-lede">Mobile-first BMI utility that pairs fast inputs with humane copy—education without pretending to replace clinicians.</p>
-                            <ul class="project-bullets">
-                                <li>Validated height/weight entry with instantaneous BMI computation.</li>
-                                <li>Band-specific guidance copy that motivates next steps instead of jargon dumps.</li>
-                                <li>Readable layouts tuned for one-thumb use on smaller screens.</li>
-                                <li>Android packaging so the calculator is always handy when curiosity strikes.</li>
-                                <li>Grounding project for mobile UX details: errors, empties, and microcopy polish.</li>
-                            </ul>
-                            <p class="project-stack-line">Tech: Android · Java/Kotlin-ready patterns · UX microcopy</p>
-                        </div>
-                    </article>
-                    <article class="project-item">
-                        <div class="project-media project-media--icon project-media--ecommerce">
-                            <img src="images/icon-ecommerce.svg" alt="" class="project-icon" width="112" height="112" loading="lazy">
-                        </div>
-                        <div class="project-body">
-                            <h3>Ecommerce Website</h3>
-                            <p class="project-sub">Web · Electronics storefront concept</p>
-                            <p class="project-lede">Catalog-first storefront for consumer electronics—emphasis on grids, rhythm, and clear calls-to-action over decorative noise.</p>
-                            <ul class="project-bullets">
-                                <li>Product tiles with SKU-style hierarchy, emphasis states, and scannable pricing.</li>
-                                <li>Flows that mimic real ecommerce UX: browse grids → detail storytelling → decisive CTAs.</li>
-                                <li>Responsive breakpoints that keep merchandising coherent on handheld widths.</li>
-                                <li>Consistent typography + spacing scales so the presentation feels storefront-grade.</li>
-                                <li>Front-end stamina builder before jumping into SPA frameworks at scale.</li>
-                            </ul>
-                            <p class="project-stack-line">Tech: HTML · CSS · JavaScript · Responsive layouts</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Certificates Section -->
-<section id="certificates" class="animate-on-scroll section-pad muted-bg certificates-section">
-    <div class="container">
-        <p class="section-label">Recognition</p>
-        <h2>Certificates &amp; accomplishments</h2>
-        <p class="section-lead">Recent highlights—hover for a shine effect, click to view full size.</p>
-
-        <h3 class="cert-group-title">Latest</h3>
-        <div class="certificate-grid certificate-grid--featured">
-            <article class="certificate-card certificate-card--featured" tabindex="0" data-cert-src="images/certificate-nepal-us-hackathon-2026.png" data-cert-alt="Participant certificate for Nepal–US Hackathon 2026">
-                <span class="cert-badge">2026</span>
-                <div class="cert-preview" aria-hidden="true">
-                    <img src="images/certificate-nepal-us-hackathon-2026.png" alt="" class="certificate-img" loading="lazy" width="600" height="400">
-                </div>
-                <div class="certificate-body">
-                    <h3>Nepal–US Hackathon 2026</h3>
-                    <p class="cert-meta">Nepali Leaders Network · Mar 27–29, 2026</p>
-                    <p>Participant certificate — Team 7 (Bugslayer).</p>
-                </div>
-            </article>
-            <article class="certificate-card certificate-card--featured" tabindex="0" data-cert-src="images/certificate-ai-fluency-framework.png" data-cert-alt="Certificate: AI Fluency Framework and Foundations by Anthropic">
-                <span class="cert-badge">New</span>
-                <div class="cert-preview" aria-hidden="true">
-                    <img src="images/certificate-ai-fluency-framework.png" alt="" class="certificate-img" loading="lazy" width="600" height="400">
-                </div>
-                <div class="certificate-body">
-                    <h3>AI Fluency: Framework &amp; Foundations</h3>
-                    <p class="cert-meta">Anthropic · Certificate of completion</p>
-                    <p>Foundational AI fluency program with academic partners.</p>
-                </div>
-            </article>
-            <article class="certificate-card certificate-card--featured" tabindex="0" data-cert-src="images/certificate-ai-fluency-students.png" data-cert-alt="Certificate: AI Fluency for students by Anthropic">
-                <span class="cert-badge">New</span>
-                <div class="cert-preview" aria-hidden="true">
-                    <img src="images/certificate-ai-fluency-students.png" alt="" class="certificate-img" loading="lazy" width="600" height="400">
-                </div>
-                <div class="certificate-body">
-                    <h3>AI Fluency for students</h3>
-                    <p class="cert-meta">Anthropic · Certificate of completion</p>
-                    <p>Student-focused track on applied AI literacy.</p>
-                </div>
-            </article>
-        </div>
-
-        <h3 class="cert-group-title">Earlier certifications</h3>
-        <div class="certificate-grid">
-            <article class="certificate-card" tabindex="0" data-cert-src="images/certificate1.png" data-cert-alt="Foundations of Prompt Engineering certificate">
-                <div class="cert-preview" aria-hidden="true">
-                    <img src="images/certificate1.png" alt="" class="certificate-img" loading="lazy" width="600" height="400">
-                </div>
-                <div class="certificate-body">
-                    <h3>Foundations of Prompt Engineering</h3>
-                    <p>Advanced techniques in prompt design and AI model optimization.</p>
-                </div>
-            </article>
-            <article class="certificate-card" tabindex="0" data-cert-src="images/certificate2.png" data-cert-alt="AWS for Games Part I certificate">
-                <div class="cert-preview" aria-hidden="true">
-                    <img src="images/certificate2.png" alt="" class="certificate-img" loading="lazy" width="600" height="400">
-                </div>
-                <div class="certificate-body">
-                    <h3>Getting Started with AWS for Games — Part I</h3>
-                    <p>Cloud infrastructure fundamentals for game development.</p>
-                </div>
-            </article>
-            <article class="certificate-card" tabindex="0" data-cert-src="images/certificate3.png" data-cert-alt="AWS for Games Part II certificate">
-                <div class="cert-preview" aria-hidden="true">
-                    <img src="images/certificate3.png" alt="" class="certificate-img" loading="lazy" width="600" height="400">
-                </div>
-                <div class="certificate-body">
-                    <h3>Getting Started with AWS for Games — Part II</h3>
-                    <p>Advanced cloud patterns for building and scaling games.</p>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="animate-on-scroll section-pad">
-    <div class="container narrow">
-        <p class="section-label">Let's talk</p>
-        <h2>Contact me</h2>
-        <p class="section-lead">Open to collaboration, internships, and interesting projects.</p>
-        <div class="contact-info">
-            <p><strong>Email:</strong> <a href="mailto:prathamrai12377@gmail.com">prathamrai12377@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+13176039925">+1 (317) 603-9925</a></p>
-        </div>
-    </div>
-</section>
-
-<!-- Certificate lightbox -->
-<div id="cert-modal" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title" hidden>
-    <div class="cert-modal__backdrop" data-close-modal></div>
-    <div class="cert-modal__panel">
-        <button type="button" class="cert-modal__close" data-close-modal aria-label="Close">&times;</button>
-        <h2 id="cert-modal-title" class="visually-hidden">Certificate</h2>
-        <img id="cert-modal-img" class="cert-modal__img" src="" alt="" />
-    </div>
-</div>
-
-<!-- Footer -->
-<footer class="site-footer">
-    <div class="footer-glow footer-glow--a" aria-hidden="true"></div>
-    <div class="footer-glow footer-glow--b" aria-hidden="true"></div>
-    <div class="container footer-container">
-        <div class="footer-about">
-            <h3>About me</h3>
-            <p>
-                A passionate software developer focused on clean, efficient, and user-friendly applications.
-            </p>
-        </div>
-        <div class="footer-links">
-            <h3>Quick links</h3>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-social">
-            <h3>Follow me</h3>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/pratham_bhujel7/" target="_blank" rel="noopener noreferrer">
-                    <img src="images/instagram.png" alt="Instagram" />
-                </a>
-                <a href="https://www.linkedin.com/in/pratham-bhujel-b70476206/?trk=opento_sprofile_details" target="_blank" rel="noopener noreferrer">
-                    <img src="images/linkedin.png" alt="LinkedIn" />
-                </a>
-                <a href="https://x.com/BhujelPratham" target="_blank" rel="noopener noreferrer">
-                    <img src="images/twitter.png" alt="X (Twitter)" />
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 Pratham Raj Bhujel. All rights reserved.</p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-nav"><div class="scroll-progress" aria-hidden="true"></div><div class="container nav-inner">
+    <a class="brand" href="#home" aria-label="Pratham Raj Bhujel, back to top"><span class="brand-mark">P<span>.</span></span><span class="brand-name">Pratham Raj Bhujel</span></a>
+    <nav aria-label="Main navigation"><ul id="site-nav-links" class="nav-links"><li><a href="#home">Home</a></li><li><a href="#projects">Work</a></li><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#certificates">Credentials</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+    <div class="nav-actions"><button id="theme-toggle" class="icon-button theme-toggle" type="button" aria-label="Switch theme" title="Switch theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button><a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a><button class="icon-button nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Open navigation"><span></span><span></span><span></span></button></div>
+  </div></header>
+  <main id="main">
+    <section id="home" class="hero"><div class="container hero-grid"><div class="hero-copy"><p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> SOFTWARE DEVELOPER · GREEN BAY, WI</p><h1>Building things<br>that <em>make sense.</em></h1><p class="hero-lead">Hi, I'm <strong>Pratham Raj Bhujel.</strong> I turn curious ideas into useful, human-centered software across web, mobile, cloud, and AI.</p><div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="button button-text" href="#about">More about me <span aria-hidden="true">↓</span></a></div><div class="hero-proof"><span class="proof-line" aria-hidden="true"></span><span>Computer Science · University of Wisconsin–Green Bay</span></div></div><div class="hero-visual"><div class="portrait-backdrop"><span class="portrait-ring" aria-hidden="true"></span><img src="images/profile.png" alt="Portrait of Pratham Raj Bhujel" width="775" height="615" fetchpriority="high" decoding="async"><span class="portrait-caption">A curious mind. A builder's mindset.</span></div><div class="floating-note"><span class="note-icon" aria-hidden="true">✦</span><span><strong>From idea to impact</strong><small>One thoughtful build at a time</small></span></div></div></div><div class="container hero-footer"><span>SCROLL TO EXPLORE</span><span aria-hidden="true">↓</span><span>01 / THE PORTFOLIO</span></div></section>
+    <section id="projects" class="section section-projects"><div class="container"><div class="section-heading reveal"><div><p class="section-kicker">01 / SELECTED WORK</p><h2>Projects with <em>purpose.</em></h2></div><p>From wellbeing and cooking to finance and commerce, these projects reflect how I learn by building.</p></div><div class="filter-bar reveal" role="group" aria-label="Filter projects"><button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All projects</button><button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web</button><button class="filter-button" type="button" data-filter="ai" aria-pressed="false">AI</button><button class="filter-button" type="button" data-filter="mobile" aria-pressed="false">Mobile</button><button class="filter-button" type="button" data-filter="desktop" aria-pressed="false">Desktop</button><span id="project-status" role="status" aria-live="polite">Showing 5 of 5 projects</span></div>
+      <div class="project-grid">
+        <article class="project-item project-featured reveal" data-category="web ai"><div class="project-visual project-visual-mindcare"><div class="project-visual-top"><span>01 / FEATURED BUILD</span><span aria-hidden="true">✳</span></div><div class="concept-card"><span class="concept-overline">MINDCARE · A SAFER SPACE</span><strong>How are you<br>feeling today?</strong><div class="mood-row" aria-hidden="true"><span>☀</span><span>◒</span><span>☁</span><span>☂</span></div><small>Mindful check-ins for every day</small></div><span class="visual-note">Interface concept</span></div><div class="project-content"><div class="project-topline"><span>HACKATHON · 2026</span><span>01</span></div><h3>Mindcare</h3><p>A mental wellbeing check-in experience designed with Nepali youth in mind. The team's approach brings culturally aware journaling, non-diagnostic support zones, and safety-minded guidance together.</p><div class="tags"><span>React</span><span>TypeScript</span><span>Go</span><span>PostgreSQL</span><span>ML</span></div><details><summary>Explore the approach <span aria-hidden="true">↗</span></summary><ul><li>A two-minute questionnaire maps users to support zones without making diagnoses.</li><li>“You Are Not Alone” offers journaling prompts and conversation starters in a cultural context.</li><li>The team explored elevated-risk flows, structured learning paths, and habit support.</li><li>An Extra Trees classifier used curated Kaggle data, with reference to WHO and CDC public health material.</li></ul></details></div></article>
+        <article class="project-item project-featured reveal" data-category="mobile ai"><div class="project-visual project-visual-recipe"><div class="project-visual-top"><span>02 / FEATURED BUILD</span><span aria-hidden="true">✳</span></div><div class="recipe-plate"><span class="recipe-emoji" aria-hidden="true">🥗</span><span class="recipe-card"><small>RECIPE BUDDY</small><strong>Good food starts<br>with what you have.</strong><span>Discover · Cook · Enjoy</span></span></div><span class="visual-note">Interface concept</span></div><div class="project-content"><div class="project-topline"><span>TEAM PROJECT · UWGB</span><span>02</span></div><h3>Smart AI Recipe Assistant</h3><p>Recipe Buddy uses camera-driven ingredient checks and structured AI cooking steps to make the journey from pantry to plate easier.</p><div class="tags"><span>Mobile</span><span>Camera APIs</span><span>AI</span><span>Design patterns</span></div><details><summary>Explore the approach <span aria-hidden="true">↗</span></summary><ul><li>Ingredient recognition and validation through device camera APIs.</li><li>Structured recipe steps mapped to guided cooking and timers.</li><li>Explored nutritional dashboards and ingredient substitutions.</li><li>Documented requirements, user stories, performance tradeoffs, and an Abstract Factory for recipe modes.</li></ul></details></div></article>
+        <article class="project-item project-small reveal" data-category="desktop"><div class="small-project-image small-project-finance"><img src="images/icon-finance-tracker.svg" alt="" width="82" height="82" loading="lazy"></div><div class="project-content"><div class="project-topline"><span>DESKTOP · JAVA</span><span>03</span></div><h3>Finance Tracker App</h3><p>A practical budgeting app for quick expense capture, category breakdowns, and clearer monthly spending trends.</p><div class="tags"><span>Java</span><span>Desktop UI</span><span>Data modeling</span></div></div></article>
+        <article class="project-item project-small reveal" data-category="mobile"><div class="small-project-image small-project-bmi"><img src="images/icon-bmi.svg" alt="" width="82" height="82" loading="lazy"></div><div class="project-content"><div class="project-topline"><span>ANDROID · HEALTH</span><span>04</span></div><h3>BMI Calculator</h3><p>A mobile BMI utility with validated inputs, instant calculation, and understandable guidance for one-handed use.</p><div class="tags"><span>Android</span><span>Java</span><span>Mobile UX</span></div></div></article>
+        <article class="project-item project-small reveal" data-category="web"><div class="small-project-image small-project-commerce"><img src="images/icon-ecommerce.svg" alt="" width="82" height="82" loading="lazy"></div><div class="project-content"><div class="project-topline"><span>WEB · FRONT END</span><span>05</span></div><h3>Ecommerce Website</h3><p>An electronics storefront concept with responsive product grids, scannable pricing, and a clear path from browsing to purchase.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div></article>
+      </div><p class="project-footnote">Want to see what I'm building next? <a href="https://github.com/BhujelPratham" target="_blank" rel="noopener noreferrer">Visit my GitHub <span aria-hidden="true">↗</span></a></p></div></section>
+    <section id="about" class="section section-about"><div class="container about-grid"><div class="about-heading reveal"><p class="section-kicker">02 / THE PERSON BEHIND THE CODE</p><h2>Curious by nature.<br><em>Builder by choice.</em></h2><div class="about-rule"></div><p class="about-location">Based in Green Bay, Wisconsin</p></div><div class="about-content reveal"><p class="about-intro">I care about the space where useful technology meets real people.</p><p>I studied Computer Science at the University of Wisconsin–Green Bay, with experience across Java, Python, C#, JavaScript, SQL, Salesforce CRM, Android development, cloud computing, and MongoDB.</p><p>I'm happiest when learning something new, collaborating with a team, and turning a rough idea into software that feels clear and approachable.</p><a class="inline-link" href="https://www.linkedin.com/in/pratham-bhujel-b70476206/" target="_blank" rel="noopener noreferrer">Get to know me on LinkedIn <span aria-hidden="true">↗</span></a></div></div></section>
+    <section id="skills" class="section section-skills"><div class="container"><div class="section-heading reveal"><div><p class="section-kicker">03 / THE TOOLBOX</p><h2>What I <em>work with.</em></h2></div><p>A growing mix of fundamentals, frameworks, and curiosity.</p></div><div class="skill-groups"><div class="skill-group reveal"><span class="skill-number">01</span><h3>Languages &amp; web</h3><div class="skill-tags"><span>Java</span><span>Python</span><span>JavaScript</span><span>C</span><span>C++</span><span>C#</span><span>HTML &amp; CSS</span><span>SQL</span></div></div><div class="skill-group reveal"><span class="skill-number">02</span><h3>Platforms &amp; tools</h3><div class="skill-tags"><span>React</span><span>Node.js</span><span>Android</span><span>JavaFX</span><span>MongoDB</span><span>AWS</span><span>Azure</span><span>Linux</span><span>Git &amp; GitHub</span><span>Salesforce CRM</span></div></div><div class="skill-group reveal"><span class="skill-number">03</span><h3>Areas of interest</h3><div class="skill-tags"><span>AI &amp; ML</span><span>Prompt engineering</span><span>Algorithms</span><span>Cloud computing</span><span>Game development</span><span>Computer architecture</span></div></div></div></div></section>
+    <section id="experience" class="section section-experience"><div class="container"><div class="section-heading reveal"><div><p class="section-kicker">04 / THE JOURNEY</p><h2>Experience &amp; <em>education.</em></h2></div><p>Real work, steady learning, and a foundation in computer science.</p></div><div class="timeline"><article class="timeline-item reveal"><div class="timeline-date">MAR 2024 — PRESENT</div><div class="timeline-marker" aria-hidden="true"></div><div class="timeline-content"><span class="timeline-type">WORK EXPERIENCE</span><h3>Government Affairs IT Student Assistant</h3><p class="timeline-org">Business &amp; Government Outreach · Green Bay, WI · Remote</p><p>Supporting IT needs for government affairs and outreach, including web content, data-driven tasks, operations research tooling, and technical support.</p></div></article><article class="timeline-item reveal"><div class="timeline-date">2023 — 2026</div><div class="timeline-marker" aria-hidden="true"></div><div class="timeline-content"><span class="timeline-type">EDUCATION</span><h3>Computer Science</h3><p class="timeline-org">University of Wisconsin–Green Bay</p><p>Built a foundation in software development, systems, and practical problem solving.</p></div></article></div></div></section>
+    <section id="certificates" class="section section-certificates"><div class="container"><div class="section-heading reveal"><div><p class="section-kicker">05 / ALWAYS LEARNING</p><h2>Credentials &amp; <em>milestones.</em></h2></div><p>Hands-on learning across AI, cloud, and product development. Select a certificate to view it.</p></div><h3 class="cert-group-heading">Verified AI credentials <span>2025—2026</span></h3><div class="credential-grid">
+      <article class="credential-card reveal"><span class="credential-issuer">ANTHROPIC · APR 2026</span><h4>AI Fluency for Students</h4><p>Credential ID x6ptn8t36e79</p><a href="https://verify.skilljar.com/c/x6ptn8t36e79" target="_blank" rel="noopener noreferrer">Verify credential <span aria-hidden="true">↗</span></a></article>
+      <article class="credential-card reveal"><span class="credential-issuer">ANTHROPIC · APR 2026</span><h4>AI Fluency: Framework &amp; Foundations</h4><p>Credential ID e4r9q9tpkd4a</p><a href="https://verify.skilljar.com/c/e4r9q9tpkd4a" target="_blank" rel="noopener noreferrer">Verify credential <span aria-hidden="true">↗</span></a></article>
+      <article class="credential-card reveal"><span class="credential-issuer">ANTHROPIC · APR 2026</span><h4>Introduction to Claude Cowork</h4><p>Credential ID htunxwkwbp32</p><a href="https://verify.skilljar.com/c/htunxwkwbp32" target="_blank" rel="noopener noreferrer">Verify credential <span aria-hidden="true">↗</span></a></article>
+      <article class="credential-card reveal"><span class="credential-issuer">IBM · DEC 2025</span><h4>Artificial Intelligence Fundamentals</h4><p>IBM SkillsBuild · Credly badge</p><a href="https://www.credly.com/badges/69460255-43e8-43f1-92d1-f6c477a42746/public_url" target="_blank" rel="noopener noreferrer">Verify credential <span aria-hidden="true">↗</span></a></article>
+      <article class="credential-card reveal"><span class="credential-issuer">IBM · DEC 2025</span><h4>Scuderia Ferrari HP Meets IBM Innovation: AI-Powered Racing</h4><p>Credential ID ALM-COURSE_3955043</p><a href="https://www.linkedin.com/in/pratham-bhujel-b70476206/" target="_blank" rel="noopener noreferrer">View on LinkedIn <span aria-hidden="true">↗</span></a></article>
+    </div><h3 class="cert-group-heading">Certificates &amp; recognition <span>THE GALLERY</span></h3><div class="certificate-grid">
+      <a class="certificate-card reveal" href="images/certificate-nepal-us-hackathon-2026.png" data-cert-src="images/certificate-nepal-us-hackathon-2026.png" data-cert-alt="Participation certificate for Nepal–US Hackathon 2026"><div class="certificate-image"><img src="images/certificate-nepal-us-hackathon-2026.png" alt="" loading="lazy" width="600" height="400"></div><span class="certificate-meta">NEPALI LEADERS NETWORK · 2026</span><h4>Nepal–US Hackathon 2026</h4><p>Participant · Team 7 (Bugslayer)</p><span class="certificate-view">View certificate ↗</span></a>
+      <a class="certificate-card reveal" href="images/certificate-ai-fluency-framework.png" data-cert-src="images/certificate-ai-fluency-framework.png" data-cert-alt="AI Fluency Framework and Foundations certificate"><div class="certificate-image"><img src="images/certificate-ai-fluency-framework.png" alt="" loading="lazy" width="600" height="400"></div><span class="certificate-meta">ANTHROPIC · 2026</span><h4>AI Fluency: Framework &amp; Foundations</h4><p>Certificate of completion</p><span class="certificate-view">View certificate ↗</span></a>
+      <a class="certificate-card reveal" href="images/certificate-ai-fluency-students.png" data-cert-src="images/certificate-ai-fluency-students.png" data-cert-alt="AI Fluency for Students certificate"><div class="certificate-image"><img src="images/certificate-ai-fluency-students.png" alt="" loading="lazy" width="600" height="400"></div><span class="certificate-meta">ANTHROPIC · 2026</span><h4>AI Fluency for Students</h4><p>Certificate of completion</p><span class="certificate-view">View certificate ↗</span></a>
+      <a class="certificate-card reveal" href="images/certificate1.png" data-cert-src="images/certificate1.png" data-cert-alt="Foundations of Prompt Engineering certificate"><div class="certificate-image"><img src="images/certificate1.png" alt="" loading="lazy" width="600" height="400"></div><span class="certificate-meta">AI &amp; PROMPTING</span><h4>Foundations of Prompt Engineering</h4><p>Prompt design and AI foundations</p><span class="certificate-view">View certificate ↗</span></a>
+      <a class="certificate-card reveal" href="images/certificate2.png" data-cert-src="images/certificate2.png" data-cert-alt="Getting Started with AWS for Games Part I certificate"><div class="certificate-image"><img src="images/certificate2.png" alt="" loading="lazy" width="600" height="400"></div><span class="certificate-meta">AWS · CLOUD</span><h4>Getting Started with AWS for Games, Part I</h4><p>Cloud infrastructure fundamentals</p><span class="certificate-view">View certificate ↗</span></a>
+      <a class="certificate-card reveal" href="images/certificate3.png" data-cert-src="images/certificate3.png" data-cert-alt="Getting Started with AWS for Games Part II certificate"><div class="certificate-image"><img src="images/certificate3.png" alt="" loading="lazy" width="600" height="400"></div><span class="certificate-meta">AWS · CLOUD</span><h4>Getting Started with AWS for Games, Part II</h4><p>Cloud patterns for game development</p><span class="certificate-view">View certificate ↗</span></a>
+    </div></div></section>
+    <section id="contact" class="section section-contact"><div class="container contact-grid"><div class="reveal"><p class="section-kicker">06 / SAY HELLO</p><h2>Let's make<br><em>something good.</em></h2><p>Have an idea, a role, or a project worth discussing? I'd love to hear from you.</p><div class="contact-actions"><a class="button button-light" href="mailto:prathamrai12377@gmail.com">Send me an email <span aria-hidden="true">↗</span></a><button id="copy-email" class="button button-outline" type="button" data-email="prathamrai12377@gmail.com">Copy email address</button></div><p id="copy-status" class="copy-status" role="status" aria-live="polite"></p></div><div class="contact-card reveal"><span class="contact-card-label">CONNECT WITH ME</span><a href="mailto:prathamrai12377@gmail.com">prathamrai12377@gmail.com <span aria-hidden="true">↗</span></a><a href="tel:+13176039925">+1 (317) 603-9925 <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/pratham-bhujel-b70476206/" target="_blank" rel="noopener noreferrer">LinkedIn profile <span aria-hidden="true">↗</span></a><a href="https://github.com/BhujelPratham" target="_blank" rel="noopener noreferrer">GitHub profile <span aria-hidden="true">↗</span></a></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="#home">Pratham Raj Bhujel<span>.</span></a><p>Building thoughtfully, one project at a time.</p><p>© <span id="current-year">2026</span> Pratham Raj Bhujel</p><a href="#home">Back to top ↑</a></div></footer>
+  <dialog id="cert-modal" class="cert-modal" aria-labelledby="cert-modal-title"><div class="modal-heading"><h2 id="cert-modal-title">Certificate preview</h2><button type="button" data-close-modal aria-label="Close certificate preview">×</button></div><img id="cert-modal-img" alt=""></dialog>
 </body>
 </html>

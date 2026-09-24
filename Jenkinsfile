@@ -20,7 +20,12 @@ pipeline {
           credentialsId: 'aws-creds'
         ]]) {
           sh """
-            aws s3 sync . s3://${S3_BUCKET} --delete --acl public-read --region ${AWS_REGION}
+            set -eu
+            deploy_dir=\$(mktemp -d)
+            trap 'rm -rf "\$deploy_dir"' EXIT
+            cp index.html style.css script.js "\$deploy_dir/"
+            cp -R images "\$deploy_dir/"
+            aws s3 sync "\$deploy_dir/" s3://${S3_BUCKET} --delete --acl public-read --region ${AWS_REGION}
           """
         }
       }
